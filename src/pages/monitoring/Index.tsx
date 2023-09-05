@@ -1,7 +1,38 @@
-import React from "react";
+import { Box } from "@mui/material";
+import React, { useState } from "react";
+import DataChart from "../../components/charts/DataChart";
 
-const index = () => {
-  return <div></div>;
+import MapDraw from "../../components/maps/MapDraw";
+
+const SelectDate = () => {};
+
+const AvgView = () => {
+  const [min, setMin] = useState<Number>(5);
+  const [max, setMax] = useState<Number>(15);
+
+  return (
+    <Box display="flex" justifyContent="space-between">
+      <Box></Box>
+      <Box>일별 최저</Box>
+      <Box>일별 최대</Box>
+    </Box>
+  );
 };
 
-export default index;
+const Monitoring = () => {
+  return (
+    <>
+      <div style={{ display: "flex", marginTop: "20px" }}>
+        <div style={{ width: "40%" }}>
+          <MapDraw />
+        </div>
+        <div style={{ width: "60%", display: "flex", flexDirection: "column" }}>
+          <AvgView />
+          <DataChart />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Monitoring;
