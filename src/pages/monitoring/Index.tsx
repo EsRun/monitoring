@@ -12,9 +12,9 @@ const AvgView = () => {
 
   return (
     <Box display="flex" justifyContent="space-between">
-      <Box></Box>
-      <Box>일별 최저</Box>
-      <Box>일별 최대</Box>
+      <Box width="50%"></Box>
+      <Box width="25%">일별 최저</Box>
+      <Box width="25%">일별 최대</Box>
     </Box>
   );
 };
